@@ -8,4 +8,13 @@ class Api::V1::ItemsController < ApplicationController
     render json: Item.find(params[:id])
   end
 
+  def destroy
+    item = Item.find(params[:id])
+    if item.delete
+      render status: :success
+    else
+      render status: :failure
+    end
+  end
+
 end

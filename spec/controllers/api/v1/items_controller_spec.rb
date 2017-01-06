@@ -9,11 +9,4 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
     end
   end
 
-  describe "GET #show" do
-    xit "returns http success" do
-      get :show
-      expect(response).to have_http_status(:success)
-    end
-  end
-
 end
