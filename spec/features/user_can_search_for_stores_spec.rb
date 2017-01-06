@@ -17,10 +17,10 @@ describe "user can search for stores" do
     # And I should see exactly 15 results
 
     # And I should see the long name, city, distance, phone number and store type for each of the 15 results
-    expect(page).to have_content("name")
-    expect(page).to have_content("city")
-    expect(page).to have_content("distance")
-    expect(page).to have_content("phone")
-    expect(page).to have_content("store type")
+    expect(page).to have_content("Best Buy Mobile - Cherry Creek Shopping Center")
+    expect(page).to have_content("Denver")
+    expect(page).to have_content(3.25)
+    expect(page).to have_content("303-270-9189")
+    expect(page).to have_content("Mobile")
   end
 end
