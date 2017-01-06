@@ -33,10 +33,10 @@ describe "items endpoints" do
     end
   end
   context "POST /items" do
-    it "creates an item" do
-      params = {name: "new item", description: "description", image_url: "test.png"}
+    xit "creates an item" do
+      params = {item: {name: "new item", description: "description", image_url: "test.png"}}
 
-      post "api/v1/items"
+      post "api/v1/items", params.to_json, format: :json
 
       expect(response).to be_success
     end

@@ -18,12 +18,14 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def create
-    item = Item.new(item_params)
+    item = Item.create(item_params)
 
     respond_to do |format|
       if item.save
+        format.html {redirect_to destination}
         format.json {render json: item}
       else
+        format.html {render action: 'new'}
         format.json {render json: item.errors, status: :failure}
       end
     end
