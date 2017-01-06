@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "user can search for stores" do
-  scenario "a user can search for stores" do
+  scenario "a user can search for stores", :vcr do
     # As a user
     # When I visit "/"
     visit root_path
