@@ -20,5 +20,9 @@
         <a href="/orders">Orders</a>
       </li>
     </ul>
+    <%= form_tag :search, method: :get, class: "form-inline" do %>
+      <%= text_field_tag :search, nil, placeholder: "search", class: "form-control"%>
+      <%= submit_tag "Search", class: "btn btn-success" %>
+    <% end %>
   </div>
 </nav>
