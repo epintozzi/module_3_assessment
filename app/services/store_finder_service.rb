@@ -10,8 +10,8 @@ class StoreFinderService
   end
 
   def get_response(zip)
-    response = conn.get("/(area(#{zip},25))?format=json&show=longName,storeType,distance,city,phone&apiKey=#{ENV['BEST_BUY_KEY']}")
-binding.pry
+    response = conn.get("(area(#{zip},25))?format=json&show=longName,storeType,distance,city,phone&apiKey=#{ENV['BEST_BUY_KEY']}")
+    # binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
