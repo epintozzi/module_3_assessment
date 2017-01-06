@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :items,  only: [:index, :show]
   resources :orders, only: [:index, :show]
   resources :users,  only: [:index, :show]
+
+  get '/api/v1/items', to: 'items#index'
 end
