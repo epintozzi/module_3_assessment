@@ -7,7 +7,7 @@ describe "user can search for stores" do
     visit root_path
     # And I fill in a search box with "80202" and click "search"
     fill_in :search, with: "80202"
-    click_on "search"
+    click_on "Search"
     # Then my current path should be "/search" (ignoring params)
     expect(current_path).to eq(search_path)
     # And I should see stores within 25 miles of 80202
