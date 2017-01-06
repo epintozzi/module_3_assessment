@@ -1,0 +1,12 @@
+Search page
+
+<h3><%= @total%> Total Stores</h3>
+
+<% @stores.each do |store| %>
+  <li><%= store[:longName] %></li>
+  <li><%= store[:city] %></li>
+  <li><%= store[:distance] %></li>
+  <li><%= store[:storeType] %></li>
+  <li><%= store[:phone] %></li>
+  <hr>
+<% end %>
