@@ -24,10 +24,19 @@ describe "items endpoints" do
     end
   end
   context "DELETE /items" do
-    it "deletes and item" do
+    it "deletes an item" do
       item_1, item_2 = create_list(:item, 2)
 
       delete "api/v1/items/#{item_1.id}"
+
+      expect(response).to be_success
+    end
+  end
+  context "POST /items" do
+    it "creates an item" do
+      params = {name: "new item", description: "description", image_url: "test.png"}
+
+      post "api/v1/items"
 
       expect(response).to be_success
     end
